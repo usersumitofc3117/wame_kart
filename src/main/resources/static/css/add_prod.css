@@ -1,0 +1,52 @@
+/* FORM FIELDS STYLING */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+}
+
+/* Input and Textarea */
+.container input[type="text"],
+.container input[type="number"],
+.container input[type="file"],
+.container textarea {
+    width: 100%;
+    max-width: 380px;
+    padding: 10px 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+
+/* Focus effect */
+.container input:focus,
+.container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button */
+#submit-btn {
+    width: 100%;
+    max-width: 380px;
+    background: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit-btn:hover {
+    background: #0056d3;
+}
+
+/* Optional: align labels and spacing */
+.container br {
+    display: none;
+}

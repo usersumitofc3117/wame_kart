@@ -1,0 +1,21 @@
+.carousel-item {
+  height: 40vh;         /* fixed container height */
+  /* no overflow: hidden — allow container to show box background or blank area */
+  background-color: #d6b0b0; /* optional, for blank space background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.products{
+display: flex;
+
+}
+.card{
+margin: 20px;
+}

@@ -1,0 +1,126 @@
+/* commonheader.css */
+
+/* reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header and nav container */
+header {
+  background-color: #333;         /* dark background for the header */
+  width: 100%;
+}
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Center nav content horizontally and give some vertical padding */
+  padding: 10px 20px;
+}
+
+/* Style the ul inside nav */
+header nav ul {
+  list-style: none;               /* no bullets */
+  display: flex;                  /* items in a row */
+  /* if you want centered nav: */
+  justify-content: center;
+  /* if you want items start from left:
+     justify-content: flex-start; */
+  gap: 20px;                      /* space between items */
+  align-items: center;
+}
+
+/* Style each nav link item */
+header nav ul li a {
+  color: #fff;                    /* white text for links */
+  text-decoration: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;                       /* space between icon and text */
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect on link */
+header nav ul li a:hover {
+  background-color: #555;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* For Font Awesome icons size (if needed) */
+header nav ul li a i {
+  font-size: 1.2em;   /* slightly bigger icons */
+}
+
+/* Optional: responsive behaviour — nav stack vertically on small screens */
+@media (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+}
+
+/* //////////footer */
+/* Base resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Footer styles */
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6vh;
+  background: #111;               /* dark background */
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #333;
+  font-size: 0.85rem;
+  z-index: 999;
+}
+
+.footer-container {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand & year */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+/* Navigation links */
+.footer-nav a {
+  color: #ccc;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}

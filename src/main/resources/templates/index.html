@@ -1,13 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+<link rel="stylesheet" href="/css/ind.css">
 </head>
 <body>
- <div th:replace="header :: site_header"></div>
-<h1> welcomeit works </h1>
-</body>
-</html>
+    <div th:replace="header :: site_header"></div>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/img/modern-man-casual-outfit-showing-shopping-bag-okay-sign-winking-camera-recommending-shop.jpg" class=" h-40 w-100" alt="carousel">
+    </div>
+    <div class="carousel-item">
+      <img src="/img/8852951.jpg" class=" h-40 w-100" alt="carousel">
+    </div>
+    <div class="carousel-item">
+      <img src="/img/4021588.jpg" class=" h-40 w-80" alt="carousel">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>                                
+</div>          
+<!-- ///////////////////////////////////products  -->
+<div class="container"> 
+<div class="products">
+<div class="card" style="width: 18rem;">
+  <img src="/img/mobile.png" class="card-img-top" alt="..." height="150px" >
+  <div class="card-body" width="100px">
+    <h5 class="card-title">mobiles</h5>
+    <p class="card-text"></p>
+    <a href="view_details" class="btn btn-primary">view details</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="/img/pant.png" class="card-img-top" alt="..." height="150px" >
+  <div class="card-body">
+    <h5 class="card-title">clothes</h5>
+    <p class="card-text"></p>
+    <a href="view_details" class="btn btn-primary">view details</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="/img/ecom3.jpg" class="card-img-top" alt="..." height="150px" >
+  <div class="card-body">
+    <h5 class="card-title">electronics</h5>
+    <p class="card-text"></p>
+    <a href="view_details" class="btn btn-primary">view details</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="/img/groccery.jpg" class="card-img-top" alt="..." height="150px" >
+  <div class="card-body">
+    <h5 class="card-title">groccery</h5>
+    <p class="card-text"></p>
+    <a href="view_details" class="btn btn-primary">view details</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="img/beuty.png" class="card-img-top" alt="..." height="150px" >
+  <div class="card-body">
+    <h5 class="card-title">cosmetics</h5>
+    <p class="card-text"> </p>
+    <a href="view_details" class="btn btn-primary">view details</a>
+  </div>
+</div>
+
+<!-- next added mommm -->
+
+</div> 
+ </div> 
+ <div th:replace="header :: site_footer"></div>                                   
+</body>                                    
+</html>                                    
