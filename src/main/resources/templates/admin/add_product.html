@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/css/add_product.css">
+</head>
+<body>
+     <div th:replace="~{header :: site_header}"></div>
+
+
+ <div class="container" >
+
+<div th:if="${message}" class="alert alert-success">
+    <p th:text="${message}"></p>
+</div>
+
+<form th:action="@{/admin/add_prodnew}" method="post" th:object="${Addproduct}" enctype="multipart/form-data">
+    add product name : <input type="text" th:field="*{productName}" id="product-name"><br>
+<div><label >category</label >
+<!-- <select class="form-control" th:field="*{category}" >
+<option >---select---</option>
+<option ></option>
+</select> -->
+<select class="form-control" th:field="*{categoryname}">
+    <option value="">--- Select Category ---</option>
+    <option th:each="c : ${categories}"
+            th:value="${c.categoryname}"
+            th:text="${c.categoryname}">
+    </option>
+</select>
+</div>
+    add description : <textarea   th:field="*{description}" id="texti"></textarea><br>
+    add stock: <input type="number"  th:field="*{stock}" id="stock"><br>
+    add price : <input type="number"  th:field= "*{price}" id="price"><br>
+    add img : <input type="file" name="image" required id="prod-img"><br>
+    <input type="submit" value="add product" id="submit-btn">
+</form>
+</div>
+
+</body>
+</html>

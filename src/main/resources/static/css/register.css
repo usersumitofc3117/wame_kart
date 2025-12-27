@@ -1,0 +1,108 @@
+/* == FORM PAGE BASE STYLES == */
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+/* Form container */
+form {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 32px 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth fade-in for form */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form headline */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+/* Labeled fields spacing */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Input fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.25s ease-in-out;
+}
+
+/* Input focus effect */
+form input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102,126,234,0.4);
+  outline: none;
+}
+
+/* Submit button */
+form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Submit hover */
+form input[type="submit"]:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  form {
+    padding: 24px 20px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}

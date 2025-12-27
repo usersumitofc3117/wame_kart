@@ -6,7 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-     <div th:replace="header :: site_header"></div>
-<h1>view_prod</h1>
+     <div th:replace="~{header :: site_header}"></div>
+<div class="container">
+<h1> view product details</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">sl no.</th>
+ <th scope="col">image</th>
+      <th scope="col"> product name</th>
+      <th scope="col">category</th>
+      <th scope="col">price</th>
+      <th scope="col">stock</th>
+      <th scope="col">action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="prody,p:${products}">
+      <th scope="row">[[${p.count}]]</th>
+      <td><img th:src="@{'/img/product_img/'+${prody.imageName}}" width="50px" height="50px"></td>
+      <td>[[${prody.productName}]]</td>
+      <td>[[${prody.categoryname}]]</td>
+      <td>[[${prody.price}]]</td>
+      <td>[[${prody.stock}]]</td>
+      <td>
+<a href="#" class="btn btn-sm btn-primary">edit</a>
+<a href="#" class="btn btn-sm btn-danger">delete</a>
+</td>
+      
+
+    </tr>
+
+  </tbody>
+</table>
+</div>
 </body>
 </html>

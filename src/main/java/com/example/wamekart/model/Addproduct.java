@@ -4,22 +4,24 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-
-
 @Entity
-@Data
 @Table
-public class Customer {
+@Data
+public class Addproduct {
 @Id
 @GeneratedValue(strategy=GenerationType.IDENTITY)
-private Long id;
-private String username;
-private  String email;
-private Long number;
-private String address;
-private String password;
-private String role;
+    private Long id;
+private String productName;
+private String description;
+private String categoryname;
+private String stock;
+private int price;
+private String imageName;
+private String imageType;
+@Lob
+private byte[] imageData;
 }

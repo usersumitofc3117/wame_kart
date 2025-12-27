@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/css/add_cate.css">
+</head>
+<body>
+     <div th:replace="~{header :: site_header}"></div>
+
+<main>
+<form th:object="${category}"
+      action="/admin/updateCategory"
+      method="post"
+      enctype="multipart/form-data">
+
+<input type="hidden" th:field="*{id}">
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">EDIT CATEGORY</div>
+
+  <div th:if="${session.successmsg}" style="color: green;">
+    <p th:text="${session.successmsg}"></p>
+  </div>
+
+  <div th:if="${session.errormsg}" style="color: red;">
+    <p th:text="${session.errormsg}"></p>
+  </div>
+
+  <ul class="list-group list-group-flush">
+
+    <li class="list-group-item">
+      Enter Category
+      <input type="text" th:field="*{categoryname}">
+    </li>
+
+    <li class="list-group-item">
+      Status
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               th:field="*{isactive}"
+               value="true"
+               id="radioDefault1">
+        <label for="radioDefault1">Active</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               th:field="*{isactive}"
+               value="false"
+               id="radioDefault2">
+        <label for="radioDefault2">Inactive</label>
+      </div>
+    </li>
+
+    <li class="list-group-item">
+      Upload Image
+      <input type="file" name="file">
+    </li>
+
+  </ul>
+
+  <img th:src="@{'/img/category_img/' + ${category.imageName}}"
+       width="100" height="100">
+
+  <input type="submit" value="update">
+</div>
+</form>           
+<!-- ///////////                  //////////// -->
+
+</main>
+ <div th:replace="header :: site_footer"></div>
+</body>
+</html>

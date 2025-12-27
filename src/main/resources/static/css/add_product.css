@@ -1,0 +1,75 @@
+/* Container styling */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Apply spacing and base style to all inputs */
+.container form input[type="text"],
+.container form input[type="number"],
+.container form textarea,
+.container form input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Textarea height */
+.container form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Submit button style */
+#submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Hover effect for button */
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Label spacing */
+.container form input,
+.container form textarea {
+    margin-bottom: 15px;
+}
+
+/* Text labels before inputs */
+.container form {
+    font-size: 15px;
+    color: #333;
+}
+
+/* Additional spacing */
+
+/* Make file input consistent */
+#prod-img {
+    padding: 6px;
+}
+
+/* Improve text appearance */
+body {
+    background: #eef2f5;
+    padding: 20px;
+}

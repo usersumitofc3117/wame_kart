@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/css/adminDashBoard.css">
+</head>
+<body>
+  <div th:replace="~{header :: site_header}"></div>
+
+<h1><strong>ADMIN DASHBOARD</strong></h1>
+<div class="container">
+<div class="dash_box"><a href="/admin/add_prod"><i class="fa-solid fa-square-plus "></i>Add products</a></div>
+<div class="dash_box"><a href="/admin/add_cate"><i class="fa-solid fa-list " ></i>Add category</a></div>
+<div class="dash_box"><a href="view_prod"><i class="fa-solid fa-table-list "></i>View products</a></div>
+<div class="dash_box"><a href="check_order"><i class="fa-solid fa-box-open "></i>orders</a></div>
+<div class="dash_box"><a href="check_user"><i class="fa-solid fa-circle-user "></i>Users</a></div>
+<div class="dash_box"><a href="add_admin"><i class="fa-solid fa-user-plus "></i>Add Admin</a></div>
+</div>
+ <div th:replace="header :: site_footer"></div>
+</body>
+</html>

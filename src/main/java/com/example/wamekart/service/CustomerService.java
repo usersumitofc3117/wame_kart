@@ -1,8 +1,10 @@
-// package com.example.wamekart.service;
+package com.example.wamekart.service;
 
-// import com.example.wamekart.model.Customer;
+import org.springframework.stereotype.Service;
 
-// public interface CustomerService {
-//     public Customer getRegister(Customer customer); 
-// public Customer getLogin(Customer customer );
-// }
+import com.example.wamekart.model.Customer;
+@Service
+public interface CustomerService {
+    public Customer getRegister(Customer customer); 
+
+}

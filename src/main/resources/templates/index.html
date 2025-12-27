@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/ind.css">
 </head>
 <body>
-    <div th:replace="header :: site_header"></div>
+    <div th:replace="~{header :: site_header}"></div>
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -29,54 +29,12 @@
     <span class="visually-hidden">Next</span>
   </button>                                
 </div>          
-<!-- ///////////////////////////////////products  -->
-<div class="container"> 
-<div class="products">
-<div class="card" style="width: 18rem;">
-  <img src="/img/mobile.png" class="card-img-top" alt="..." height="150px" >
-  <div class="card-body" width="100px">
-    <h5 class="card-title">mobiles</h5>
-    <p class="card-text"></p>
-    <a href="view_details" class="btn btn-primary">view details</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="/img/pant.png" class="card-img-top" alt="..." height="150px" >
-  <div class="card-body">
-    <h5 class="card-title">clothes</h5>
-    <p class="card-text"></p>
-    <a href="view_details" class="btn btn-primary">view details</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="/img/ecom3.jpg" class="card-img-top" alt="..." height="150px" >
-  <div class="card-body">
-    <h5 class="card-title">electronics</h5>
-    <p class="card-text"></p>
-    <a href="view_details" class="btn btn-primary">view details</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="/img/groccery.jpg" class="card-img-top" alt="..." height="150px" >
-  <div class="card-body">
-    <h5 class="card-title">groccery</h5>
-    <p class="card-text"></p>
-    <a href="view_details" class="btn btn-primary">view details</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="img/beuty.png" class="card-img-top" alt="..." height="150px" >
-  <div class="card-body">
-    <h5 class="card-title">cosmetics</h5>
-    <p class="card-text"> </p>
-    <a href="view_details" class="btn btn-primary">view details</a>
-  </div>
-</div>
 
-<!-- next added mommm -->
+<!-- ////productsbar*********************************** -->
 
-</div> 
- </div> 
- <div th:replace="header :: site_footer"></div>                                   
+
+<!-- ////productsbar*********************************** -->
+
+ <div th:replace="header :: site_footer"></div>                                      
 </body>                                    
 </html>                                    
